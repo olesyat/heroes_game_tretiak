@@ -1,16 +1,18 @@
 package characters;
 
+import kickbehaviour.Behaviour;
+import kickbehaviour.Elfbehaviour;
+import lombok.ToString;
+
+@ToString
 public class Elf extends Character {
     public Elf(){
         super(10,10);
+        setBehaviour(new Elfbehaviour());
     }
     public void kick(Character c){
-        if(this.getPower()>c.getPower()){
-            c.setHp(0);
-        }
-        else{
-            c.setHp(c.getHp()-1);
-        }
+        Behaviour behaviour = getBehaviour();
+        behaviour.kick(this, c);
     }
 
 }

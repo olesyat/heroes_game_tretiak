@@ -1,5 +1,8 @@
 package characters;
 
+import lombok.ToString;
+
+@ToString
 public class Hobbit extends Character {
     public Hobbit() {
         super(0, 3);

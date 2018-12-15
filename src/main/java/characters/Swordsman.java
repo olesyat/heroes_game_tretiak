@@ -2,6 +2,8 @@ package characters;
 
 import kickbehaviour.Behaviour;
 import kickbehaviour.Randombehaviour;
+import lombok.ToString;
+
 
 public class Swordsman extends Character {
     public Swordsman(int min, int max){
